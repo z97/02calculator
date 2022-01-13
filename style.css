@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+body {
+    background-color: var(--bg);
+}
+
+:root {
+    /*theme1*/
+    --white: #fff;
+    --veryLightShadeOfOrange: #EAE3DC;
+    --veryDarkShadeOfBlue: #181f33;
+    --darkShadeOfBlue: #242d44;
+    --mediumDarkShadeOfBlue: #3A4663;
+    --lightShadeOfBlue: #A2B2E1;
+    --isAMediumLightShadeOfRed: #F96B5B;
+    --shadeOfBlue: #647198;
+    --shadeOfRed: #D03F2F;
+
+    /*theme2*/
+    --veryLightShadeOfYellow: #E5E4E1;
+    --darkShadeOfYellow-Green: #36362C;
+    --lightShadeOfRed: #D2CDCD;
+    --veryLightShadeOfGray: #E6E6E6;
+    --mediumDarkShadeOfCyan: #378187;
+    --mediumDarkShadeOfOrange: #C85402;
+    --shadeOfCyan: #62b5bc;
+    --mediumLightShadeOfOrange: #ff8a38;
+
+    /*theme3*/
+    --veryDarkShadeOfBlue-Magenta: #17062A;
+    --mediumLightShadeOfYellow: #FFE53D;
+    --veryDarkShadeOfBlue-Magenta2: #1e0936;
+    --darkShadeOfBlue-Magenta: #331C4D;
+    --mediumDarkShadeOfMagenta: #56077c;
+    --shadeOfCyan2: #00DED0;
+    --shadeOfMagenta: #8631AF;
+    --lightShadeOfCyan: #93FFF8
+}
+
+.theme1 {
+    --bg: var(--mediumDarkShadeOfBlue);
+    --name: var(--white);
+    --inputBackGround: var(--veryDarkShadeOfBlue);
+    --keysbg: var(--darkShadeOfBlue);
+    --keybg: var(--veryLightShadeOfOrange);
+    --keybgActive: var(--white);
+    --keyReset: var(--shadeOfBlue);
+    --keyResetActive: var(--lightShadeOfBlue);
+    --keyEqual: var(--shadeOfRed);
+    --keyEqualActive: var(--isAMediumLightShadeOfRed);
+    --keyText: var(--mediumDarkShadeOfBlue);
+    --keyDelResetText: var(--white);
+    --keyEqualText: var(--white);
+    --inputText: var(--white);
+}
+
+.theme2 {
+    --bg: var(--veryLightShadeOfGray);
+    --name: var(--darkShadeOfYellow-Green);
+    --inputBackGround: #eee;
+    --keysbg: var(--lightShadeOfRed);
+    --keybg: var(--veryLightShadeOfYellow);
+    --keybgActive: var(--white);
+    --keyReset: var(--mediumDarkShadeOfCyan);
+    --keyResetActive: var(--shadeOfCyan);
+    --keyEqual: var(--mediumDarkShadeOfOrange);
+    --keyEqualActive: var(--mediumLightShadeOfOrange);
+    --keyText: var(--darkShadeOfYellow-Green);
+    --keyDelResetText: var(--white);
+    --keyEqualText: var(--white);
+    --inputText: var(--darkShadeOfYellow-Green);
+}
+
+.theme3 {
+    --bg: var(--veryDarkShadeOfBlue-Magenta);
+    --name: var(--mediumLightShadeOfYellow);
+    --inputBackGround: var(--veryDarkShadeOfBlue-Magenta2);
+    --keysbg: var(--veryDarkShadeOfBlue-Magenta2);
+    --keybg: var(--darkShadeOfBlue-Magenta);
+    --keybgActive: var(--shadeOfMagenta);
+    --keyReset: var(--mediumDarkShadeOfMagenta);
+    --keyResetActive: var(--shadeOfMagenta);
+    --keyEqual: var(--shadeOfCyan2);
+    --keyEqualActive: var(--lightShadeOfCyan);
+    --keyText: var(--mediumLightShadeOfYellow);
+    --keyDelResetText: var(--white);
+    --keyEqualText: var(--veryDarkShadeOfBlue-Magenta2);
+    --inputText: var(--mediumLightShadeOfYellow)
+}
+
+.container {
+    max-width: 540px;
+    margin: 10vh auto 0 auto;
+}
+
+#display {
+    text-align: right;
+    height: 128px;
+    line-height: 128px;
+    font-size: 48px;
+    font-family: 'Spartan', sans-serif;
+    background-color: var(--inputBackGround);
+    caret-color: var(--inputText);
+    color: var(--inputText);
+    margin-bottom: 28px;
+    border-radius: 10px;
+}
+
+.buttons {
+    display: grid;
+    justify-self: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-family: 'Spartan', sans-serif;
+    padding-top: 28px;
+    background-color: var(--keysbg);
+    border-radius: 10px;
+}
+
+.buttons > div {
+    justify-self: center;
+
+}
+
+.button {
+    padding-top: 20px;
+    width: 101px;
+    height: 44px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: var(--keybg);
+    color: var(--keyText);
+    margin-bottom: 28px;
+}
+
+#equal {
+    background-color: var(--keyEqual);
+    color: var(--keyEqualText)
+}
+
+#equal:hover {
+    background-color: var(--keyEqualActive);
+    color: var(--keyEqualText);
+}
+
+#del {
+    background-color: var(--keyReset);
+    color: var(--keyDelResetText);
+}
+
+#del:hover {
+    background-color: var(--keyResetActive);
+}
+
+.button:hover {
+    background-color: var(--keybgActive);
+}
+
+#reset {
+    background-color: var(--keyReset);
+    color: var(--keyDelResetText);
+}
+
+#reset:hover {
+    background-color: var(--keyResetActive);
+    color: var(--keyDelResetText);
+
+}
+
+.Name {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "Logo Theme";
+    grid-area: Name;
+    color: var(--name);
+    height: 44px;
+    padding-bottom: 28px;
+}
+
+.Logo {
+    grid-area: Logo;
+    font-size: 32px;
+    font-family: 'Spartan', sans-serif;
+}
+
+.Theme {
+    justify-self: end;
+    grid-area: Theme;
+}
+
+@media (max-width: 540px) {
+    body {
+        padding: 0;
+    }
+
+    .button {
+        width: 15vw;
+    }
+
+    #screen {
+        width: 100vw;
+    }
+
+    .container {
+        margin: 10px;
+    }
+}
